@@ -16,7 +16,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: black;
   }
 
 h1 {
@@ -26,6 +25,7 @@ h1 {
     text-align: center;
     color: white;
     font-size: 10ch;
+    margin-top: 5%;
 }
 
 h2 {
@@ -42,8 +42,157 @@ p {
     font-style: normal;
     font-weight: 400;
     color: white;
-    text-align: left;
 }
+
+
+body {
+    color: white;
+    background-color: black;
+  }
+
+  /* Noder i bevægelse */
+
+  .muzieknootjes {
+  display: block;
+  margin: auto;
+  position: relative;
+  width: 50px;
+  min-width: 300px;
+  height: 50px;
+  border: 0px solid #000;
+}
+
+.noot-1,
+.noot-2,
+.noot-3,
+.noot-4,
+.noot-5 {
+  position: relative;
+  animation: notes 4s infinite linear;
+  font-size: 35px;
+  opacity: 0;
+}
+
+.noot-1 {
+  top: 30px;
+  left: 10%;
+  animation-delay: 0.5s;
+}
+
+.noot-2 {
+  top: 75px;
+  left: 30%;
+  animation-delay: 1s;
+}
+
+.noot-3 {
+  top: 90px;
+  left: 40%;
+  animation-delay: 1.5s;
+}
+
+.noot-4 {
+  top: 2px;
+  right: 90%;
+  animation-delay: 1.5s;
+}
+
+.noot-5 {
+    top: 10px;
+    right: 28%;
+    animation-delay: 1.5s;
+  }
+
+
+@keyframes notes {
+  0% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5) translate(50%, -50%);
+  }
+  80% {
+    opacity: 0;
+    transform: scale(1.5) translate(100%, -100%);
+  }
+}
+
+.stext {
+    text-align: center;
+    margin-top: 50px;
+    font-family: aw-conqueror-inline, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 5ch;
+}
+
+.streg {
+    border-bottom: 3px solid #FF521D;
+    line-height: 60px;
+    margin-right: 45%;
+    margin-left: 45%;
+}
+
+.smikkel {
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'News Cycle';
+    font-size: 3ch;
+}
+
+.box {
+  width: 20px;
+}
+
+.sbox {
+  width: 20px;
+}
+
+.smikkelbillede {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mikey{
+  width: 400px;
+  margin-top: 40px;
+}
+
+.scroll {
+  width: 100%;
+  height: 50px;
+  margin-top: 20px;
+  position: relative;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.scrollicon {
+  margin-top: 10px;
+  position: absolute;
+  width: 60px;
+  animation: scrollani 2s linear infinite;
+  z-index: 100;
+}
+/*Animation på pilen ned til læs mere knappen*/
+@keyframes scrollani{
+  0% {
+    top: 0%;
+    }
+    50% {
+      top: 30%;
+   }
+    100% {
+      top: 0;
+    }
+  }
+
+
 
 /* Rød streg under projekter */
 hr {
@@ -58,6 +207,7 @@ hr {
 .atekst {
     padding-right: 30%;
     padding-left: 30%;
+    text-align: left;
 }
 
 /* Hvide ord */
@@ -184,7 +334,7 @@ hr {
 }
 
 .abaggrund2 {
-    background: url(../billeder/music.jpg);
+    background: url(../images/music.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
